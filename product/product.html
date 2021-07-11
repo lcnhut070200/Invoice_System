@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <style>
+      .header {
+          position: fixed;
+          width: 100%;
+      }
+      .banner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #1D2D44;
+          color: #fff;
+          font-weight: 500;
+          height: 28px;
+          text-transform: uppercase;
+          font-size: 12px;
+          padding-top: 15px;
+      }
+  </style>
+
+</head>
+<body>
+  <div class="header" id="header">
+      <div class="banner">
+          <p>HỆ THỐNG QUẢN LÝ CỬA HÀNG</p>
+      </div>
+  </div>
+    <!--Navigation-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card mt-5">
+                    <div style="margin-left: 15px;" class="card-title ml-5 my-2">
+                    <!-- Order Button -->
+                    <button><a href="../index.php" style="font-size: 18px; text-decoration:none; color: #1D2D44; text-align: center;">VỀ LẠI TRANG CHỦ</a></button>
+                    <button style="font-size: 18px; text-decoration:none; color: #1D2D44; text-align: center;" data-toggle="modal" data-target="#insert">THÊM SẢN PHẨM MỚI</button>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="card-body">
+                    <p id="delete-message" class="text-dark"></p>
+                    <div id="table"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!--order-->
+        <div class="modal" id="insert">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-dark">Thêm sản phẩm</h3>
+                </div>
+                <div class="modal-body">
+                <p id="message" class="text-dark"></p>
+                    <form>
+                    <!-- <input type="text" class="form-control my-2" placeholder="Mã sản phẩm" id="sp_ma"> -->
+                    <input type="text" class="form-control my-2" placeholder="Tên sản phẩm" id="sp_ten">
+                    <input type="text" class="form-control my-2" placeholder="Đơn vị tính" id="sp_donvitinh">
+                    <input type="text" class="form-control my-2" placeholder="Giá bán hiện tại" id="sp_giahientai">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="btn_add">Thêm</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn_close">Huỷ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Delete Modal-->
+    <div class="modal" id="delete">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="text-dark">Delete Record</h3>
+          </div>
+          <div class="modal-body">
+            <p> Do You Want to Delete the Record ?</p>
+            <button type="button" class="btn btn-success" id="btn_delete_record">Xóa</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn_close">Huỷ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../product/myjs-product.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
